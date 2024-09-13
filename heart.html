@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Foi difícil fazer isso, ok? rsrs -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ily</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1b1b1b;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pulsar-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .pulsar {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            background-color: #d30a0a;
+            clip-path: polygon(
+                    50% 17%,                    
+                    65% 8%,
+                    87% 18%,
+                    94% 35%,
+                    88% 55%,
+                    73% 74%,
+                    50% 97%,
+                    27% 74%,
+                    12% 55%,
+                    6% 35%,
+                    13% 18%,
+                    35% 8%
+                );
+            animation: heartbeat 1s infinite alternate;
+
+        }
+
+        @keyframes heartbeat {
+            to {
+                transform: scale(1.4);
+            }
+        }
+
+        .pulsar::before {
+            content: "";
+            width: 15px;
+            height: 40px;
+            background-color: white;
+            clip-path: polygon(100% 0%, 70% 20%, 55% 30%, 40% 50%, 55% 70%, 70% 80%, 100% 100%,
+            45% 90%, 30% 80%, 15% 70%, 0% 50%, 15% 30%, 30% 20%, 45% 10%);
+            position: absolute;
+            border-radius: 100%;
+            rotate: 5deg;
+            left: 12%;
+            top: 18%;
+        }
+
+        .pulsar::after {
+            content: "";
+            width: 13%;
+            height: 5%;
+            background-color: inherit;
+            position: absolute;
+            left: 90%;
+            top: 94%;
+            border-radius: 22%;
+            transform: rotateZ(-45deg);
+        }
+
+        .text {
+            margin-top: 60px;
+            color: white;
+            font-size: 18px;
+            font-family: 'Cursive', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://open.spotify.com/playlist/0mIRzchQuGDr2Jgn1VNWjO?si=53e75e34886e4c86" class="pulsar-link">
+        <div class="pulsar"></div>
+    </a>
+    <div class="text">Clique no coração :)</div>
+</body>
+
+</html>
